@@ -1,0 +1,39 @@
+{
+  "training": {
+    "batch_size": 32,
+    "epochs": 20,
+    "learning_rate": 0.001,
+    "validation_split": 0.2,
+    "test_split": 0.1,
+    "early_stopping_patience": 10,
+    "reduce_lr_patience": 5
+  },
+  "preprocessing": {
+    "target_size": [224, 224],
+    "normalize": true,
+    "augmentation": {
+      "rotation_range": 20,
+      "width_shift_range": 0.2,
+      "height_shift_range": 0.2,
+      "horizontal_flip": true,
+      "zoom_range": 0.2
+    }
+  },
+  "models": {
+    "custom_cnn": {
+      "dropout_rate": 0.5
+    },
+    "resnet50": {
+      "freeze_layers": true,
+      "dropout_rate": 0.5
+    },
+    "efficientnet_b0": {
+      "freeze_layers": true,
+      "dropout_rate": 0.3
+    }
+  },
+  "visualization": {
+    "figsize": [12, 8],
+    "dpi": 300
+  }
+}
